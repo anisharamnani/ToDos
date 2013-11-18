@@ -29,12 +29,12 @@
 #After successfully completing the previous game (there should be a commit with a working version of this game), alter the game so that a player can "hit" as many times as they want.
 
 def blackJack
-    def checkWin 
+	def checkWin 
 		if total == 21 
 			puts "You won!"
 		else 
 			puts "You lost kiddo."
-        end
+		end
 	end
 
 	hits = 0
@@ -45,14 +45,16 @@ def blackJack
 
 	want_hit = gets.chomp
 
-	while want_hit == "hit" && hits <= 2 
-		new_card = rand(11)+1
-		total = new_card + total	
-        puts "Your new card is #{new_card}. Your total is #{total}."
-        hits = 1 + hits
-    end
-    
-    checkWin() 
+	def hits want_hit 
+
+		if want_hit == "hit" && hits <= 2 
+			new_card = rand(11)+1
+			total = new_card + total	
+			puts "Your new card is #{new_card}. Your total is #{total}."
+			hits = 1 + hits
+		else 
+			checkWin
+		end
 end 
 
 blackJack()
