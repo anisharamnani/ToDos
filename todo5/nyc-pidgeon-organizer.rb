@@ -23,67 +23,34 @@ pigeon_data = {
   }
 }
 
-pigeon_list = Hash.new 
+pigeon_list = {} 
+
+# takes the name from the gener & adds them to the pigeon hash 
+# sets the gender value for the pigeon as well in the gender hash
 
 pigeon_data[:gender].each do |gender, array|
-    array.each do |name|
-        pigeon_list[name] = {}
-        pigeon_list[name][:gender] = gender.to_s
-    end
+  array.each do |name|
+      pigeon_list[name] = {}
+      pigeon_list[name][:gender] = gender.to_s
+  end
 end
 
+# sets the lives value for the pigeon
 pigeon_data[:lives].each do |live, array|
-    array.each do |name|
-        pigeon_list[name][:lives] = live
-    end
+  array.each do |name|
+      pigeon_list[name][:lives] = live
+  end
 end
 
-pigeon_data[:color].each do |color, array|
-    array.each do |name|
-        pigeon_list[name][:color] = color
-    end
+# creates a hash with an empty array for color 
+pigeon_list.each do |name, hash|
+  hash[:color]= []
 end
 
-
-
-# Iterate over the hash above collecting each pigeon by name and insert it
-# as the key of a new hash where each name holds the attributes for that bird. 
-# Your output should match the hash below:
-
-# pigeon_list = {
-#   "Theo" => {
-#     :color => ["purple", "grey"],
-#     :gender => "male",
-#     :lives => "Subway"
-#   },
-#   "Peter Jr." => {
-#     :color => ["purple", "grey"],
-#     :gender => "male",
-#     :lives => "Library"
-#   },
-#   "Lucky" => {
-#     :color => ["purple"],
-#     :gender => "male",
-#     :lives => "City Hall"
-#   },
-#   "Ms .K" => {
-#     :color => ["grey", "white"],
-#     :gender => "female",
-#     :lives => "Central Park"
-#   },
-#   "Queenie" => {
-#     :color => ["white", "brown"],
-#     :gender => "female",
-#     :lives => "Subway"
-#   },
-#   "Andrew" => {
-#     :color => ["white"],
-#     :gender => "male",
-#     :lives => "Central Park"
-#   },
-#   "Alex" => {
-#     :color => ["white", "brown"],
-#     :gender => "male",
-#     :lives => "Central Park"
-#   }
-# }
+# adds the colors to the array for :color 
+  pigeon_data[:color].each do |color, array|
+    if array.include? name
+      hash[:color] << color.to_s
+    end
+  end
+end
