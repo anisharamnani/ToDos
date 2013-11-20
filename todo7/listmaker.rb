@@ -8,8 +8,10 @@
 
 # e.g make_list(["ich", "ni", "san"]) #=> ["1. ich", "2. ni", "3. san"]
 
-def make_list array
-	array.map.with_index{|item, index| "#{index+1}. #{item}"}
+class Array
+	def make_list
+		self.map.with_index{|item, index| "#{index+1}. #{item}"}
+	end
 end 
 
 # def make_list
