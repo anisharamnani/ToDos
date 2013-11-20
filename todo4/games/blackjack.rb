@@ -53,7 +53,7 @@ def first_move hand
 end 
 
 def deal hand
-	card = rand(11)
+	card = rand(1..11)
 	puts "You have been dealt a #{card}"
 	hand << card 
 end
