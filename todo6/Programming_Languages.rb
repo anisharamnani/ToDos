@@ -33,14 +33,11 @@ languages = {
   }
 }
 
-# Armando & Gus helped with this code. =] 
-
 new_lang = {}
 languages.each_pair do |style, lang_hash|
   lang_hash.each_pair do |lang, type|
-    # the reason we run unless is because java_script is listed in :oo and :functional 
-    new_lang[lang] = type unless new_hash[lang]
-    new_lang[lang][:style] = [] unless new_hash[lang]
+    new_lang[lang] = type
+    new_lang[lang][:style] = []
     new_lang[lang][:style] << style
   end 
 end 
