@@ -36,8 +36,8 @@ languages = {
 new_lang = {}
 languages.each_pair do |style, lang_hash|
   lang_hash.each_pair do |lang, type|
-    new_lang[lang] = type
-    new_lang[lang][:style] = []
+    new_lang[lang] = type unless new_lang[lang]
+    new_lang[lang][:style] = [] unless new_lang[lang][:style]
     new_lang[lang][:style] << style
   end 
 end 
