@@ -20,8 +20,7 @@
 # Note: I've intentionally omitted a step here where you'd have to somehow tell your class that were using an array of 1,2,3
 
 class FakeArray
-
-	attr_accessor :info 
+	attr_reader :array 
 
 	def initialize array
 		@info = array
