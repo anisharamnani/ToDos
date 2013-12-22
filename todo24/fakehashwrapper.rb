@@ -24,12 +24,14 @@ class FakeHashWrapper
 		hash[key] if (hash.has_key?(key.to_sym) || hash.has_key?(key.to_s))
 	end 
 
-	def key_back_alpha hash 
+	def alpha hash 
 		hash.keys.sort.reverse 
 	end 
 
 	def first_letter letter 
-		hash.values.select {|value| (elements.key(value))[0] == letter}
+		hash.values.select {|value| (hash.key(value))[0] == letter}
 	end 
 
 end
+
+
