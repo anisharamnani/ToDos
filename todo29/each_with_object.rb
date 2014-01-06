@@ -10,4 +10,3 @@ def even_sum(arr)
 	end 
 end
 
-puts even_sum(["cat", "dog", "bird", "fish"]) #=> ["drib", "hsif"]
