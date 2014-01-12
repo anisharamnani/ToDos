@@ -1,31 +1,47 @@
 DOCTYPE html
 <html>
-	<head> 
+	<head>
+		<title> Hello, world! </title>
+		<link rel="stylesheet" type="text/css" href="cess/bootstrap-theme.css">
+		<link rel="stylesheet" type="text/css" href="css/bootsrap.css">
+		<link rel="stylesheet" type="text/css" href="css/custom.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"> </script>
 	</head>
 
 	<body>
-		<nav>
-			<div>
-				<a href="#"> Project </a>
-				<ul>
-					<li> <a href="#"> Home </a></li>
-					<li> <a href="#"> About </a></li>
-					<li> <a href="#"> Contact </a></li>
-				</ul>
-			</div>
-		</nav>
-
-		<div>
-			<h1> Hello, world! <h1>
-			<p> This is an example. =] </p>
-		<div>
-	</body>
-
-</html>
-
-Things to Do 
--todo27 
-
--codepen assignment 2 
--bootstrap carousel 
--todo28 
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="brand" href="#"> Project name </a>
+					<div class="nav-collapse collapse">
+						<ul class="nav">
+							<li class="active"> 
+								<a href="home"> Home </a>
+							</li>
+							<li> 
+								<a href="about"> About </a>
+							</li>
+							<li> 
+								<a href="contact"> Contact </a>
+							</li>
+							<li class="dropdown"> 
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown"> Dropdown </a>
+									<b class="caret"></b>
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Option 1</a></li>
+									<li><a href="#">Option 2</a></li>
+									<li class="divider"></li>
+									<li class="nav-header"> Nav header </li>
+									<li><a href="#"> separate link 1 </a> </li>
+									<li><a href="#"> separate link 1 </a> </li>
+								</ul>
+							</li>
+					
